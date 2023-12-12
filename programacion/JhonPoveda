@@ -1,0 +1,93 @@
+Ejercicio 1.
+Algoritmo alza_dolar
+	Definir val,mayor,dia Como Real;
+	mayor <- 0
+	
+	Para i<-1 Hasta 7 Hacer
+		
+		Escribir 'Ingrese El Valor Del Dolar El Día ',i
+		
+		Leer val
+		
+		Si val>mayor Entonces
+			
+			mayor <- val
+			
+			dia <- i
+			
+		FinSi
+		
+	FinPara
+	
+	Escribir 'El Alza Mas Alta Es: '
+	
+	Escribir '$',mayor,' En El Día ',dia
+FinAlgoritmo
+
+
+
+
+Ejercicio 2.
+Algoritmo maquina_alimentos
+	Definir comA Como Entero;
+	Definir comB Como Entero;
+	Definir comC Como Entero;
+	Definir producto Como Caracter;
+	Definir monedas Como Entero;
+	comA=270;
+	comB=340;
+	comC=390;
+	monedas=10
+	monedas=50
+	monedas=100
+	
+	Escribir "Por favor elige el producto que desea (A, B, C,)";
+	Leer producto;
+	Escribir "el producto A vale 270";
+	Escribir"Ingrese monedas, (10,50,100)";
+	Leer monedas;
+	
+	Segun producto Hacer
+		"A":
+			precioProducto <- precioA
+		"B":
+			precioProducto <- precioB
+		"C":
+			precioProducto <- precioC
+	FinSegun
+	
+	montoIngresado <- 0
+	
+	Mientras montoIngresado < precioProducto Hacer
+		Escribir "Ingrese una moneda (10, 50 o 100): "
+		Leer moneda
+		
+	    Si No EsMonedaValida Entonces
+			Escribir "Moneda no válida. Por favor, ingrese 10, 50 o 100."
+			Leer moneda
+		Sino
+			montoIngresado <- montoIngresado + moneda
+		FinSi
+	FinMientras
+	
+	vuelto <- montoIngresado - precioProducto
+	
+	Si vuelto > 0 Entonces
+		Escribir "Vuelto:"
+		Mientras vuelto > 0 Hacer
+			Para Cada moneda En OrdenDescendente Hacer
+				Mientras vuelto >= moneda Hacer
+					Escribir moneda
+					vuelto <- vuelto - moneda
+				FinMientras
+			FinPara
+		FinMientras
+	FinSi
+FinAlgoritmo
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+Algoritmo Promocion
+	Definir n Como Entero;
+	Definir canProductos Como Entero;
+	Definir x Como Entero;
+	Definir precio Como Real;
+	Definir preTotal Como Real;
+	Definir desTotal Como Real;
+	Definir preFinal Como Real;
+	n<-0;
+	preTotal<-0;
+	desTotal<-0;
+	
+	Escribir "Ingrese el valor de n"
+	Leer n;
+	Escribir"Ingrese la cantidad de productos"
+	Leer canProductos;
+	
+	Para x<- 1 Hasta canProductos Con Paso n Hacer
+		Escribir"Ingrese el precio del Producto", x, ":"
+		Leer precio;
+	
+	 preTotal<-preTotal+precio;
+	 desTotal<-desTotal+(precio*0.2);
+    Fin Para
+ 
+	  preFinal<-Redon(preTotal-desTotal);
+	  
+	Escribir "Precio Total:", preTotal;
+	Escribir "Descuento Total:", desTotal;
+	Escribir "Precio Total despues del descuento:", preFinal;
+	
+FinAlgoritmo
+
+
+
+
+
+Algoritmo Evaluacion
+	Definir certamen1 Como Real;
+	Definir certamen2 Como Real;
+	Definir certamen3 Como Real;
+	Definir examen Como Real;
+	Definir promeCertamen Como Real;
+	certamen1<-0;
+	certamen2<-0;
+	certamen3<-0;
+	examen<-0;
+	
+	Escribir "Ingrese nota del primer certamen:"
+	Leer certamen1;
+	Escribir "Ingrese nota del segundo certamen:"
+	Leer certamen2;
+	
+	Si certamen1<2 o certamen2<2 Entonces
+		Escribir "Reprobado por notas menores a 2 en los primeros examenes"
+	SiNo
+		
+		Si certamen1>9 Y certamen2>9 Entonces
+			Escribir "Aprobado por notas mayores en los primeros certamen"
+		SiNo
+	        Escribir "Ingrese nota del tercer certamen:"
+			Leer certamen3;
+			
+			promeCertamen<-(certamen1+certamen2+certamen3)/3;
+			
+			Si promeCertamen<3 Entonces
+				Escribir "Reprobado por promedio menor a 3 en los certamen"
+			SiNo
+				Si promeCertamen>7 Entonces
+					Escribir "Aprovado por promedio mayor o igual a 7 en los certamen"
+				SiNo
+					Escribir "Ingrese el examen:"
+					Leer examen
+					
+					Si examen>=5 Entonces
+						Escribir "Aprobado por nota mayor o igual a 5 en el examen"
+					SiNo
+						Escribir "Reprobado por nota menos a 5 en el examen"
+					FinSi
+				
+				FinSi
+			Fin Si
+		FinSi
+	Fin Si
+FinAlgoritmo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

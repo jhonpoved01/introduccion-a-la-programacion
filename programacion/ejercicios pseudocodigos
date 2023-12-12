@@ -1,0 +1,27 @@
+Ejercicio 2.Orden
+Algoritmo Ordenamiento
+	Definir numero1 Como Entero;
+	Definir numero2 Como Entero;
+	Definir mayorque Como Caracter;
+	Definir menorque Como Caracter;
+	
+	Escribir "Escribir numero1"
+	Leer numero1
+	Escribir "Escribir numero2"
+	Leer numero2
+	
+	Si mayorque0">" 
+		Entonces numero1<-numero2
+		Escribir "numero1 es mayor que numero2" mayorque
+	SiNo
+		
+		Si menorque="<"
+			Entonces numero2<-numero1
+			Escribir "numero2 es menor que numero1" menorque
+			 
+		FinSi
+	Fin Si
+	
+	
+FinAlgoritmo
+

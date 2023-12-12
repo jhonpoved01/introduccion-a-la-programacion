@@ -1,0 +1,45 @@
+Funcion ListaArreglos( notas )
+	Para i<-0 Hasta 29 Con Paso 1 Hacer
+		Escribir notas[i]
+	Fin Para
+Fin Funcion
+
+Funcion LlenarArreglos( notas )
+	Para i<-0 Hasta 29 Con Paso 1 Hacer
+		notas[i]<-azar (10)+1
+	Fin Para
+Fin Funcion
+
+Funcion Promedio<-PromArreglos( notas )
+	Definir Promedio Como Real
+	Definir sum Como Entero
+		Promedio<-0
+	Para i<-0 Hasta 29 Con Paso 1 Hacer
+		sum<-sum+notas[i]
+	Fin Para
+	Escribir sum;
+	Promedio=sum/30
+Fin Funcion
+
+Funcion Reprobados<-PromArreglos( notas )
+	Definir Reprobados Como Entero
+	Reprobados<-0
+	contador<-0
+	Para i<=1 Hasta 29 Hacer
+		Si notas[i]<=6 Entonces
+			contador<-contador+1
+		Fin Si
+	Fin Para
+Fin Funcion
+
+Algoritmo Arreglos
+	
+	Definir Promedio Como Real
+	Dimension notas[30]
+	LlenarArreglos(notas)
+	ListaArreglos(notas)
+	Promedio<-PromArreglos( notas )
+	Escribir "El promedio es:",Promedio
+	
+FinAlgoritmo
+
